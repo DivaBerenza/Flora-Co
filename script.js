@@ -65,3 +65,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggleBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+
+    const submenuParents = document.querySelectorAll(".nav-links .has-submenu > a");
+
+    submenuParents.forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const submenu = link.nextElementSibling;
+            submenu.classList.toggle("active");
+        });
+    });
+});
+
+
+
+
