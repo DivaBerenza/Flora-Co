@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Flora & Co</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="article.html">Article</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <select class="mobile-nav" onchange="location = this.value;">
+                        <option value="index.html">Home</option>
+                        <option value="about.html">About</option>
+                        <option value="catalog.html">Catalog</option>
+                        <option value="article.html" selected>Article</option>
+                        <option value="#">Contact</option>
+                    </select>
+                </nav>
+                <h2 class="header-title">Flora & Co</h2>
+                <div class="header-actions">
+                    <button class="sign-up" onclick="window.location.href='register.html'">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </button>
+                    <div class="profile-container">
+                        <div class="profile-icon" onclick="toggleProfileDropdown()">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div id="profile-dropdown" class="profile-dropdown">
+                            <a href="profile.html" class="dropdown-item">
+                                <i class="fas fa-user"></i>
+                                <span>Profile</span>
+                            </a>
+                            <a href="dashboard.html" class="dropdown-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="article-hero">
+        <div class="container">
+            <div class="article-hero-content" data-aos="fade-up">
+                <h1>Floral Insights & Inspiration</h1>
+                <p>Discover the latest trends, care tips, and stories from the world of flowers</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="article-categories">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="category-btn active" data-category="all">All Articles</button>
+                <button class="category-btn" data-category="care">Flower Care</button>
+                <button class="category-btn" data-category="events">Event Ideas</button>
+                <button class="category-btn" data-category="trends">Trends</button>
+                <button class="category-btn" data-category="stories">Our Stories</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-article">
+        <div class="container">
+            <div class="featured-content" data-aos="fade-up">
+                <div class="featured-media">
+                    <img src="images/feature.jpg" alt="Featured Article">
+                    <div class="article-badge">Featured</div>
+                </div>
+                <div class="featured-text">
+                    <span class="article-category">Flower Care</span>
+                    <h2>How to Make Your Cut Flowers Last Longer</h2>
+                    <p class="article-excerpt">Discover professional techniques to extend the life of your floral arrangements with our comprehensive guide to flower care and maintenance...</p>
+                    <div class="article-meta">
+                        <span class="author">By Jennifer Lee</span>
+                        <span class="date">May 15, 2023</span>
+                        <span class="read-time">5 min read</span>
+                    </div>
+                    <a href="article-detail.html" class="read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="article-grid">
+        <div class="container">
+            <div class="grid-container">
+                <!-- Article 1 -->
+                <div class="article-card" data-aos="fade-up" data-category="trends" onclick="showArticleDetail('Top Floral Trends for 2023', 'images/floraltrend.jpg', 'Explore the color palettes, arrangements, and styles that will dominate weddings and events this year. In 2023, bold colors, sustainable floristry, and unique textures are in the spotlight. Discover how to incorporate these trends into your own floral designs for unforgettable occasions.', 'June 2, 2023', 'Trends')">
+                    <div class="article-image">
+                        <img src="images/floraltrend.jpg" alt="Floral Trends 2023">
+                        <div class="category-tag">Trends</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Top Floral Trends for 2023</h3>
+                        <p>Explore the color palettes, arrangements, and styles that will dominate weddings and events this year.</p>
+                        <div class="article-footer">
+                            <span>June 2, 2023</span>
+                            <a href="#" class="read-link">Read <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Article 2 -->
+                <div class="article-card" data-aos="fade-up" data-aos-delay="100" data-category="events" onclick="showArticleDetail('Choosing the Perfect Wedding Flowers', 'images/wedding.jpg', 'A comprehensive guide to selecting flowers that match your wedding theme, season, and personality. Make your special day even more memorable with the right floral choices.', 'April 18, 2023', 'Event Ideas')">
+                    <div class="article-image">
+                        <img src="images/wedding.jpg" alt="Wedding Flowers">
+                        <div class="category-tag">Event Ideas</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Choosing the Perfect Wedding Flowers</h3>
+                        <p>A comprehensive guide to selecting flowers that match your wedding theme, season, and personality.</p>
+                        <div class="article-footer">
+                            <span>April 18, 2023</span>
+                            <a href="#" class="read-link">Read <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Article 3 -->
+                <div class="article-card" data-aos="fade-up" data-aos-delay="200" data-category="care" onclick="showArticleDetail('Seasonal Flower Guide: What\'s Blooming Now', 'images/seasonal.jpg', 'Learn which flowers are in season throughout the year for the freshest and most affordable arrangements. Our seasonal guide helps you choose blooms that are both beautiful and budget-friendly.', 'March 5, 2023', 'Flower Care')">
+                    <div class="article-image">
+                        <img src="images/seasonal.jpg" alt="Seasonal Flowers">
+                        <div class="category-tag">Flower Care</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Seasonal Flower Guide: What's Blooming Now</h3>
+                        <p>Learn which flowers are in season throughout the year for the freshest and most affordable arrangements.</p>
+                        <div class="article-footer">
+                            <span>March 5, 2023</span>
+                            <a href="#" class="read-link">Read <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Article 4 -->
+                <div class="article-card" data-aos="fade-up" data-category="stories" onclick="showArticleDetail('Behind the Bouquet: A Day with Our Florists', 'images/story.jpg', 'An intimate look at the creative process and dedication that goes into every Flora & Co arrangement. Discover the artistry and passion of our florists in this behind-the-scenes story.', 'February 20, 2023', 'Our Stories')">
+                    <div class="article-image">
+                        <img src="images/story.jpg" alt="Flora & Co Story">
+                        <div class="category-tag">Our Stories</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Behind the Bouquet: A Day with Our Florists</h3>
+                        <p>An intimate look at the creative process and dedication that goes into every Flora & Co arrangement.</p>
+                        <div class="article-footer">
+                            <span>February 20, 2023</span>
+                            <a href="#" class="read-link">Read <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Article 5 -->
+                <div class="article-card" data-aos="fade-up" data-aos-delay="100" data-category="events" onclick="showArticleDetail('DIY: Create a Stunning Centerpiece in 5 Steps', 'images/diy.jpg', 'Follow our easy tutorial to make a professional-looking floral centerpiece for your next gathering. Impress your guests with your creativity and floral design skills.', 'January 12, 2023', 'Event Ideas')">
+                    <div class="article-image">
+                        <img src="images/diy.jpg" alt="DIY Centerpiece">
+                        <div class="category-tag">Event Ideas</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>DIY: Create a Stunning Centerpiece in 5 Steps</h3>
+                        <p>Follow our easy tutorial to make a professional-looking floral centerpiece for your next gathering.</p>
+                        <div class="article-footer">
+                            <span>January 12, 2023</span>
+                            <a href="#" class="read-link">Read <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Article 6 -->
+                <div class="article-card" data-aos="fade-up" data-aos-delay="200" data-category="trends" onclick="showArticleDetail('Sustainable Floristry: Eco-Friendly Flower Practices', 'images/eco.jpg', 'How Flora & Co is leading the way in environmentally conscious floral design and sourcing. Learn about our sustainable practices and how they benefit the planet.', 'December 8, 2022', 'Trends')">
+                    <div class="article-image">
+                        <img src="images/eco.jpg" alt="Sustainable Floristry">
+                        <div class="category-tag">Trends</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Sustainable Floristry: Eco-Friendly Flower Practices</h3>
+                        <p>How Flora & Co is leading the way in environmentally conscious floral design and sourcing.</p>
+                        <div class="article-footer">
+                            <span>December 8, 2022</span>
+                            <a href="#" class="read-link">Read <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Article Detail Modal -->
+            <div id="article-detail-modal" class="product-modal" style="display:none;">
+                <div class="modal-content" style="max-width:600px">
+                    <button class="modal-close" onclick="closeArticleDetail()">&times;</button>
+                    <img id="modal-article-image" class="modal-image" src="" alt="">
+                    <span id="modal-article-category" class="article-category"></span>
+                    <h2 id="modal-article-title"></h2>
+                    <p id="modal-article-date" style="color:#888;font-size:0.95em;margin-bottom:10px;"></p>
+                    <p id="modal-article-desc" class="description"></p>
+                </div>
+            </div>
+            <div class="pagination" data-aos="fade-up">
+                <a href="#" class="page-btn active">1</a>
+                <a href="#" class="page-btn">2</a>
+                <a href="#" class="page-btn">3</a>
+                <a href="#" class="page-btn next">Next <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content" data-aos="fade-up">
+                <h2>Get More Floral Inspiration</h2>
+                <p>Subscribe to our newsletter for the latest articles, tips, and exclusive offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-left">
+                Flora & Co
+            </div>
+            <div class="footer-center">
+                <h3>Contact Us</h3>
+                <a href="https://www.instagram.com/flora_co/" target="_blank">
+                    <img src="images/ig2.png" alt="Instagram Logo" class="instagram-logo">
+                </a>
+            </div>
+            <div class="footer-right">
+                <h3>Visit Us Here</h3>
+                <p>Email: floranco@email.com</p>
+                <p>Phone: +62 8126 7806</p>
+                <p>Surabaya, Indonesia</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2018 — 2023 — Privacy — Terms</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        AOS.init()
+    </script>
+    <script>
+function showArticleDetail(title, image, desc, date, category) {
+    document.getElementById('modal-article-title').textContent = title;
+    document.getElementById('modal-article-image').src = image;
+    document.getElementById('modal-article-image').alt = title;
+    document.getElementById('modal-article-desc').textContent = desc;
+    document.getElementById('modal-article-date').textContent = date;
+    document.getElementById('modal-article-category').textContent = category;
+    document.getElementById('article-detail-modal').style.display = 'flex';
+}
+function closeArticleDetail() {
+    document.getElementById('article-detail-modal').style.display = 'none';
+}
+// Optional: prevent click on .read-link from navigating
+const readLinks = document.querySelectorAll('.read-link');
+readLinks.forEach(link => link.addEventListener('click', function(e){e.preventDefault();}));
+</script>
+</body>
+</html>

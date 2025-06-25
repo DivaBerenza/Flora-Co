@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Flora & Co</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="article.html">Article</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <select class="mobile-nav" onchange="location = this.value;">
+                        <option value="#">Home</option>
+                        <option value="#">About</option>
+                        <option value="catalog.html">Catalog</option>
+                        <option value="#">Services</option>
+                        <option value="#">Contact</option>
+                    </select>
+                </nav>
+                <h2 class="header-title">Flora & Co</h2>
+                <div class="header-actions">
+                    <button class="sign-up" onclick="window.location.href='register.html'">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </button>
+                    <div class="profile-container">
+                        <div class="profile-icon" onclick="toggleProfileDropdown()">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div id="profile-dropdown" class="profile-dropdown">
+                            <a href="profile.html" class="dropdown-item">
+                                <i class="fas fa-user"></i>
+                                <span>Profile</span>
+                            </a>
+                            <a href="dashboard.html" class="dropdown-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="profile-hero">
+        <div class="container">
+            <div class="profile-hero-content">
+                <div class="profile-image-container">
+                    <img src="images/minji.jpg" alt="Profile Picture" class="profile-picture">
+                    <button class="edit-profile-pic" onclick="document.getElementById('upload-photo').click()">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                    <input type="file" id="upload-photo" style="display: none;">
+                </div>
+                <div class="profile-info">
+                    <h1>Jennifer Lee</h1>
+                    <p class="member-since">Member since June 2020</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Orders</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Favorites</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Reviews</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="profile-content">
+        <div class="container">
+            <div class="profile-tabs">
+                <button class="tab-button active" onclick="openTab('personal-info')">Personal Info</button>
+                <button class="tab-button" onclick="openTab('order-history')">Order History</button>
+                <button class="tab-button" onclick="openTab('favorites')">Favorites</button>
+                <button class="tab-button" onclick="openTab('settings')">Settings</button>
+            </div>
+
+            <div id="personal-info" class="tab-content active">
+                <div class="personal-info-content">
+                    <div class="info-section">
+                        <h3>Basic Information</h3>
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label for="full-name">Full Name</label>
+                                <input type="text" id="full-name" value="Jennifer Lee">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" value="jennifer.lee@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" value="+62 8123 4567 890">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthday">Birthday</label>
+                                <input type="date" id="birthday" value="1990-05-15">
+                            </div>
+                            <button type="submit" class="save-button">Save Changes</button>
+                        </form>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Shipping Address</h3>
+                        <div class="address-card">
+                            <div class="address-header">
+                                <h4>Primary Address</h4>
+                                <button class="edit-address">Edit</button>
+                            </div>
+                            <p>Jl. Raya Darmo Permai III No. 15</p>
+                            <p>Surabaya, East Java 60241</p>
+                            <p>Indonesia</p>
+                        </div>
+                        <button class="add-address-button">+ Add New Address</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="order-history" class="tab-content">
+                <div class="order-history-content">
+                    <div class="order-card">
+                        <div class="order-header">
+                            <span class="order-number">Order #FL20230615</span>
+                            <span class="order-date">June 15, 2023</span>
+                            <span class="order-status delivered">Delivered</span>
+                        </div>
+                        <div class="order-details">
+                            <div class="order-items">
+                                <div class="order-item">
+                                    <img src="images/sunflower.jpg" alt="Sunflower Bouquet">
+                                    <div class="item-info">
+                                        <h4>Sunshine Charm</h4>
+                                        <p>Quantity: 1</p>
+                                    </div>
+                                    <div class="item-price">$35.00</div>
+                                </div>
+                                <div class="order-item">
+                                    <img src="images/rose.jpg" alt="Rose Bouquet">
+                                    <div class="item-info">
+                                        <h4>Crimson & Snow</h4>
+                                        <p>Quantity: 1</p>
+                                    </div>
+                                    <div class="item-price">$45.00</div>
+                                </div>
+                            </div>
+                            <div class="order-summary">
+                                <div class="summary-row">
+                                    <span>Subtotal</span>
+                                    <span>$80.00</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Shipping</span>
+                                    <span>$10.00</span>
+                                </div>
+                                <div class="summary-row total">
+                                    <span>Total</span>
+                                    <span>$90.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-actions">
+                            <button class="reorder-button">Reorder</button>
+                            <button class="track-button">Track Order</button>
+                        </div>
+                    </div>
+
+                    <div class="order-card">
+                        <div class="order-header">
+                            <span class="order-number">Order #FL20230522</span>
+                            <span class="order-date">May 22, 2023</span>
+                            <span class="order-status completed">Completed</span>
+                        </div>
+                        <div class="order-details">
+                            <div class="order-items">
+                                <div class="order-item">
+                                    <img src="images/daisy.jpg" alt="Daisy Bouquet">
+                                    <div class="item-info">
+                                        <h4>Daisy Delight</h4>
+                                        <p>Quantity: 2</p>
+                                    </div>
+                                    <div class="item-price">$50.00</div>
+                                </div>
+                            </div>
+                            <div class="order-summary">
+                                <div class="summary-row">
+                                    <span>Subtotal</span>
+                                    <span>$50.00</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Shipping</span>
+                                    <span>$0.00</span>
+                                </div>
+                                <div class="summary-row total">
+                                    <span>Total</span>
+                                    <span>$50.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-actions">
+                            <button class="reorder-button">Reorder</button>
+                            <button class="review-button">Write Review</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="favorites" class="tab-content">
+                <div class="favorites-content">
+                    <div class="favorites-grid">
+                        <div class="favorite-item">
+                            <img src="images/sunflower.jpg" alt="Sunflower Bouquet">
+                            <h4>Sunshine Charm</h4>
+                            <p>$35.00</p>
+                            <div class="favorite-actions">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="remove-favorite"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <div class="favorite-item">
+                            <img src="images/rose.jpg" alt="Rose Bouquet">
+                            <h4>Crimson & Snow</h4>
+                            <p>$45.00</p>
+                            <div class="favorite-actions">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="remove-favorite"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <div class="favorite-item">
+                            <img src="images/daisy.jpg" alt="Daisy Bouquet">
+                            <h4>Daisy Delight</h4>
+                            <p>$25.00</p>
+                            <div class="favorite-actions">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="remove-favorite"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <div class="favorite-item">
+                            <img src="images/tulip.jpg" alt="Tulip Bouquet">
+                            <h4>Tulip Serenade</h4>
+                            <p>$38.00</p>
+                            <div class="favorite-actions">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="remove-favorite"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="settings" class="tab-content">
+                <div class="settings-content">
+                    <div class="settings-section">
+                        <h3>Account Settings</h3>
+                        <div class="setting-option">
+                            <div class="option-info">
+                                <h4>Change Password</h4>
+                                <p>Update your account password</p>
+                            </div>
+                            <button class="change-password-button">Change</button>
+                        </div>
+                        <div class="setting-option">
+                            <div class="option-info">
+                                <h4>Notification Preferences</h4>
+                                <p>Manage email and push notifications</p>
+                            </div>
+                            <button class="notification-settings-button">Settings</button>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Privacy</h3>
+                        <div class="setting-option">
+                            <div class="option-info">
+                                <h4>Data Privacy</h4>
+                                <p>Manage how we use your data</p>
+                            </div>
+                            <button class="privacy-settings-button">Manage</button>
+                        </div>
+                    </div>
+
+                    <div class="settings-section danger-zone">
+                        <h3>Danger Zone</h3>
+                        <div class="setting-option">
+                            <div class="option-info">
+                                <h4>Delete Account</h4>
+                                <p>Permanently delete your account and all data</p>
+                            </div>
+                            <button class="delete-account-button">Delete Account</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-left">
+                Flora & Co
+            </div>
+            <div class="footer-center">
+                <h3>Contact Us</h3>
+                <a href="https://www.instagram.com/flora_co/" target="_blank">
+                    <img src="images/ig2.png" alt="Instagram Logo" class="instagram-logo">
+                </a>
+            </div>
+            <div class="footer-right">
+                <h3>Visit Us Here</h3>
+                <p>Email: floranco@email.com</p>
+                <p>Phone: +62 8126 7806</p>
+                <p>Surabaya, Indonesia</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2018 — 2023 — Privacy — Terms</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        AOS.init();
+        
+        function openTab(tabId) {
+            // Hide all tab contents
+            const tabContents = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+            
+            // Deactivate all tab buttons
+            const tabButtons = document.getElementsByClassName('tab-button');
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove('active');
+            }
+            
+            // Activate the selected tab
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+        
+        function toggleProfileDropdown() {
+            const dropdown = document.getElementById('profile-dropdown');
+            dropdown.classList.toggle('show');
+        }
+        
+        // Close the dropdown if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.profile-icon') && !event.target.matches('.profile-icon *')) {
+                const dropdowns = document.getElementsByClassName('profile-dropdown');
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

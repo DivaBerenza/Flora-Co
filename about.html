@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Flora & Co</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="article.html">Article</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <select class="mobile-nav" onchange="location = this.value;">
+                        <option value="index.html">Home</option>
+                        <option value="about.html" selected>About</option>
+                        <option value="catalog.html">Catalog</option>
+                        <option value="#">Services</option>
+                        <option value="#">Contact</option>
+                    </select>
+                </nav>
+                <h2 class="header-title">Flora & Co</h2>
+                <div class="header-actions">
+                    <button class="sign-up" onclick="window.location.href='register.html'">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </button>
+                    <div class="profile-container">
+                        <div class="profile-icon" onclick="toggleProfileDropdown()">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div id="profile-dropdown" class="profile-dropdown">
+                            <a href="profile.html" class="dropdown-item">
+                                <i class="fas fa-user"></i>
+                                <span>Profile</span>
+                            </a>
+                            <a href="dashboard.html" class="dropdown-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <div class="about-hero-text" data-aos="fade-right">
+                    <h1>Our Story</h1>
+                    <p>Founded in 2018, Flora & Co began as a small flower stall in Surabaya with a big dream - to bring beauty and joy through flowers to every special moment in people's lives.</p>
+                </div>
+                <div class="about-hero-media" data-aos="fade-left">
+                    <img src="images/landscape2.jpg" alt="Our flower shop beginnings">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-mission">
+        <div class="container">
+            <div class="about-mission-content">
+                <div class="mission-card" data-aos="fade-up">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Our Mission</h3>
+                    <p>To create meaningful floral arrangements that celebrate life's special moments while maintaining sustainable practices.</p>
+                </div>
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-eye"></i>
+                    <h3>Our Vision</h3>
+                    <p>To become Indonesia's most trusted floral brand, known for exceptional quality, creativity, and customer service.</p>
+                </div>
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-heart"></i>
+                    <h3>Our Values</h3>
+                    <p>Passion for flowers, commitment to quality, respect for nature, and dedication to our customers' happiness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-team">
+        <div class="container">
+            <h2 data-aos="fade-up">Meet Our Team</h2>
+            <p data-aos="fade-up" data-aos-delay="50">The passionate individuals behind Flora & Co's success</p>
+            
+            <div class="team-grid">
+                <div class="team-member" data-aos="fade-up">
+                    <img src="images/minji.jpg" alt="Jennifer Lee">
+                    <h3>Jennifer Lee</h3>
+                    <p class="position">Founder & Creative Director</p>
+                    <p class="bio">With 15 years in floral design, Jennifer brings artistic vision to every arrangement.</p>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/jefri.jpg" alt="David Wijaya">
+                    <h3>David Wijaya</h3>
+                    <p class="position">Head Florist</p>
+                    <p class="bio">A third-generation florist with an eye for perfect color combinations.</p>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/ansel.jpg" alt="Sarah Tan">
+                    <h3>Anindya</h3>
+                    <p class="position">Customer Relations</p>
+                    <p class="bio">Ensures every customer's floral vision becomes reality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-process">
+        <div class="container">
+            <div class="about-process-content">
+                <div class="process-text" data-aos="fade-right">
+                    <h2>Our Process</h2>
+                    <p>Every bouquet tells a story, and we're meticulous about every detail:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Sourcing the freshest flowers from local growers</li>
+                        <li><i class="fas fa-check"></i> Hand-selecting each stem for quality</li>
+                        <li><i class="fas fa-check"></i> Designing with color theory and composition in mind</li>
+                        <li><i class="fas fa-check"></i> Carefully packaging for protection and presentation</li>
+                        <li><i class="fas fa-check"></i> Delivering with care to your doorstep</li>
+                    </ul>
+                </div>
+                <div class="process-media" data-aos="fade-left">
+                    <img src="images/design2.jpg" alt="Our floral design process">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-testimonials">
+        <div class="container">
+            <h2 data-aos="fade-up">What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <img src="images/amanda.jpg" alt="Customer photo" class="customer-photo">
+                        <div class="testimonial-text">
+                            <p>"Flora & Co created the most stunning wedding bouquet that perfectly matched my vision. Their attention to detail was incredible!"</p>
+                            <div class="customer-info">
+                                <span class="customer-name">Amanda S.</span>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <img src="images/robert.jpg" alt="Customer photo" class="customer-photo">
+                        <div class="testimonial-text">
+                            <p>"I've been ordering monthly bouquets for my wife for two years now, and Flora & Co never disappoints. Fresh, beautiful arrangements every time."</p>
+                            <div class="customer-info">
+                                <span class="customer-name">Robert K.</span>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <img src="images/lisa.jpg" alt="Customer photo" class="customer-photo">
+                        <div class="testimonial-text">
+                            <p>"The sympathy arrangement they created was so thoughtful and beautiful. It brought comfort during a difficult time."</p>
+                            <div class="customer-info">
+                                <span class="customer-name">Lisa M.</span>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-cta">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Ready to Experience Flora & Co?</h2>
+                <p>Whether you're celebrating, remembering, or just brightening someone's day, we'd love to create something special for you.</p>
+                <div class="cta-buttons">
+                    <button onclick="window.location.href='catalog.html'">Browse Our Catalog</button>
+                    <button class="secondary" onclick="window.location.href='#'">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-left">
+                Flora & Co
+            </div>
+            <div class="footer-center">
+                <h3>Contact Us</h3>
+                <a href="https://www.instagram.com/flora_co/" target="_blank">
+                    <img src="images/ig2.png" alt="Instagram Logo" class="instagram-logo">
+                </a>
+            </div>
+            <div class="footer-right">
+                <h3>Visit Us Here</h3>
+                <p>Email: floranco@email.com</p>
+                <p>Phone: +62 8126 7806</p>
+                <p>Surabaya, Indonesia</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2018 — 2020 — Privacy — Terms</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        AOS.init()
+    </script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Transaksi - Flora & Co</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <nav>
+                   <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="article.html">Article</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <select class="mobile-nav" onchange="location = this.value;">
+                        <option value="index.html">Home</option>
+                        <option value="about.html">About</option>
+                        <option value="catalog.html">Catalog</option>
+                        <option value="#">Services</option>
+                        <option value="#">Contact</option>
+                    </select>
+                </nav>
+                <h2 class="header-title">Flora & Co</h2>
+                
+                <div class="cart-icon-container" onclick="toggleCart()">
+                    &#128722;
+                    <span id="cart-count" class="cart-count">0</span>
+                </div>
+                <button class="sign-up">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shopping Cart -->
+    <div id="shopping-cart" class="shopping-cart">
+        <div class="cart-header">
+            <h3>Keranjang Belanja</h3>
+            <button onclick="toggleCart()" style="background: none; border: none; font-size: 20px; cursor: pointer;">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <div class="empty-cart">Keranjang belanja kosong</div>
+        </div>
+        <div id="cart-total" class="cart-total">Total: Rp 0</div>
+        <button id="checkout-btn" class="checkout-btn" onclick="checkout()">Checkout</button>
+    </div>
+
+    <section class="transaction-history">
+        <div class="transaction-container">
+            <div class="transaction-header">
+                <h1>Riwayat Transaksi</h1>
+                <div class="search-filter">
+                    <input type="text" placeholder="Cari transaksi...">
+                    <select>
+                        <option value="all">Semua Status</option>
+                        <option value="completed">Selesai</option>
+                        <option value="processing">Proses</option>
+                        <option value="cancelled">Dibatalkan</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="transaction-list">
+                <!-- Transaction 1 -->
+                <div class="transaction-card">
+                    <div class="transaction-card-header">
+                        <div>
+                            <span class="transaction-id">#FLORA-20230615-001</span>
+                            <span class="transaction-date">15 Juni 2023</span>
+                        </div>
+                        <span class="transaction-status status-completed">Selesai</span>
+                    </div>
+                    
+                    <div class="transaction-details">
+                        <img src="images/rose.jpg" alt="Crimson Romance" class="transaction-product-img">
+                        <div class="transaction-product-info">
+                            <div class="transaction-product-name">Crimson Romance</div>
+                            <div class="transaction-product-qty">1 x Rp 200.000</div>
+                        </div>
+                        <div class="transaction-product-price">Rp 200.000</div>
+                        
+                        <img src="images/daisy.jpg" alt="Bunga Lily Putih" class="transaction-product-img">
+                        <div class="transaction-product-info">
+                            <div class="transaction-product-name">Sweet Daisies</div>
+                            <div class="transaction-product-qty">2 x Rp 120.000</div>
+                        </div>
+                        <div class="transaction-product-price">Rp 240.000</div>
+                    </div>
+                    
+                    <div class="transaction-summary">
+                        <div class="transaction-total">Total: Rp 440.000</div>
+                        <div class="transaction-actions">
+                            <button class="transaction-btn btn-detail">Detail</button>
+                            <button class="transaction-btn btn-repeat">Beli Lagi</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Transaction 2 -->
+                <div class="transaction-card">
+                    <div class="transaction-card-header">
+                        <div>
+                            <span class="transaction-id">#FLORA-20230610-002</span>
+                            <span class="transaction-date">10 Juni 2023</span>
+                        </div>
+                        <span class="transaction-status status-processing">Proses</span>
+                    </div>
+                    
+                    <div class="transaction-details">
+                        <img src="images/mix.jpg" alt="Bunga Tulip" class="transaction-product-img">
+                        <div class="transaction-product-info">
+                            <div class="transaction-product-name">Harmony Mix</div>
+                            <div class="transaction-product-qty">1 x Rp 250.000</div>
+                        </div>
+                        <div class="transaction-product-price">Rp 250.000</div>
+                    </div>
+                    
+                    <div class="transaction-summary">
+                        <div class="transaction-total">Total: Rp 255.000</div>
+                        <div class="transaction-actions">
+                            <button class="transaction-btn btn-detail">Detail</button>
+                            <button class="transaction-btn btn-repeat">Beli Lagi</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Transaction 3 -->
+                <div class="transaction-card">
+                    <div class="transaction-card-header">
+                        <div>
+                            <span class="transaction-id">#FLORA-20230528-003</span>
+                            <span class="transaction-date">28 Mei 2023</span>
+                        </div>
+                        <span class="transaction-status status-cancelled">Dibatalkan</span>
+                    </div>
+                    
+                    <div class="transaction-details">
+                        <img src="images/rose.jpg" alt="Bunga Anggrek" class="transaction-product-img">
+                        <div class="transaction-product-info">
+                            <div class="transaction-product-name">Crimson Romance</div>
+                            <div class="transaction-product-qty">3 x Rp 150.000</div>
+                        </div>
+                        <div class="transaction-product-price">Rp 450.000</div>
+                    </div>
+                    
+                    <div class="transaction-summary">
+                        <div class="transaction-total">Total: Rp 450.000</div>
+                        <div class="transaction-actions">
+                            <button class="transaction-btn btn-detail">Detail</button>
+                            <button class="transaction-btn btn-repeat">Beli Lagi</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Transaction 4 -->
+                <div class="transaction-card">
+                    <div class="transaction-card-header">
+                        <div>
+                            <span class="transaction-id">#FLORA-20230515-004</span>
+                            <span class="transaction-date">15 Mei 2023</span>
+                        </div>
+                        <span class="transaction-status status-completed">Selesai</span>
+                    </div>
+                    
+                    <div class="transaction-details">
+                        <img src="images/sunflower.jpg" alt="Bunga Matahari" class="transaction-product-img">
+                        <div class="transaction-product-info">
+                            <div class="transaction-product-name">Sunshine Bouquet</div>
+                            <div class="transaction-product-qty">2 x Rp 150.000</div>
+                        </div>
+                        <div class="transaction-product-price">Rp 300.000</div>
+                        
+                        <img src="images/lilac.jpg" alt="Bunga Lavender" class="transaction-product-img">
+                        <div class="transaction-product-info">
+                            <div class="transaction-product-name">The Lilac</div>
+                            <div class="transaction-product-qty">1 x Rp 150.000</div>
+                        </div>
+                        <div class="transaction-product-price">Rp 150.000</div>
+                    </div>
+                    
+                    <div class="transaction-summary">
+                        <div class="transaction-total">Total: Rp 350.000</div>
+                        <div class="transaction-actions">
+                            <button class="transaction-btn btn-detail">Detail</button>
+                            <button class="transaction-btn btn-repeat">Beli Lagi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <button>&laquo;</button>
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>&raquo;</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-left">
+                Flora & Co
+            </div>
+            <div class="footer-center">
+                <h3>Contact Us</h3>
+                <a href="https://www.instagram.com/flora_co/" target="_blank">
+                    <img src="images/ig2.png" alt="Instagram Logo" class="instagram-logo">
+                </a>
+            </div>
+            <div class="footer-right">
+                <h3>Visit Us Here</h3>
+                <p>Email: floranco@email.com</p>
+                <p>Phone: +62 8126 7806</p>
+                <p>Surabaya, Indonesia</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2018 — 2020 — Privacy — Terms</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

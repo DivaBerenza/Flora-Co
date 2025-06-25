@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flora & Co</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="article.html">Article</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <select class="mobile-nav" onchange="location = this.value;">
+                        <option value="index.html">Home</option>
+                        <option value="#">About</option>
+                        <option value="catalog.html">Catalog</option>
+                        <option value="#">Services</option>
+                        <option value="#">Contact</option>
+                    </select>
+                </nav>
+                <h2 class="header-title">Flora & Co</h2>
+                <div class="header-actions">
+                    <button class="sign-up" onclick="window.location.href='register.html'">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </button>
+                    <div class="profile-container">
+                        <div class="profile-icon" onclick="toggleProfileDropdown()">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div id="profile-dropdown" class="profile-dropdown">
+                            <a href="profile.html" class="dropdown-item">
+                                <i class="fas fa-user"></i>
+                                <span>Profile</span>
+                            </a>
+                            <a href="dashboard.html" class="dropdown-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Dashboard</span>
+                            </a>
+                            <a href="history.html" class="dropdown-item">
+                                <i class="fas fa-history"></i>
+                                <span>History Transaksi</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" data-aos="fade-right">
+                    <h1>Beauty in Every Petal</h1>
+                    <p>Create special moments with meaningful fresh flower bouquets. Order now and experience the magic in every detail.</p>
+                    <button onclick="window.location.href='catalog.html'">Get Started</button>
+                </div>
+
+                <div class="hero-media" data-aos="fade-right">
+                    <img src="images/rose-ele.png" alt="Hero Media">
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testi-social">
+        <div class="container">
+            <h3>Social Media</h3>
+            <p>Some Testimonials and Social content here</p>
+        </div>
+        <div class="social-logos">
+            <a href=""><img src="images/ig.jpg"></a>
+        </div>
+    
+    </section>
+
+    <section class="feature-list" data-aos="fade-up">
+        <div class="container">
+            <div class="feature-list-content">
+                <div class="feature-list-text" >
+                    <h2>Flora & Co</h2>
+                    <p>A symphony of color and fragrance, presented for you. Discover the magic of fresh flowers that will awaken your senses and warm your heart.</p>
+                </div>
+                <div class="feature-list-media">
+                    <img src="images/list.jpg" alt="Feature List Media">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-split" data-aos="fade-left">
+        <div class="container">
+            <div class="feature-split-content">
+                <div class="feature-split-media">
+                    <img src="images/visit.jpg" alt="Feature Split Media">
+                </div>
+                <div class="feature-split-text">
+                    <h3>Our Store</h3>
+                    <p>We have many different locations that might be near you.</p>
+                    <button class="learn-more">Visit Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-quote" data-aos="fade-up">
+        <div class="container">
+            <div class="feature-quote-content">
+                <div class="feature-quote-text">
+                    <h3>Putting Colors in Every Moment</h3>
+                    <p>“Long live the rose that grew from concrete when no one else ever cared.”</p>
+                </div>
+                <div class="feature-quote-media">
+                    <img src="images/landscape2.jpg" alt="Quote Media Back" class="quote-image-back">
+                    <img src="images/landscape1.jpg" alt="Quote Media Front" class="quote-image-front">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testi-quote" data-aos="fade-up">
+        <div class="container">
+            <div class="testi-quote-content">
+                <div class="testi-quote-text">
+                    <h3>"A bouquet that brings stories and happiness in every color."</h3>
+                </div>
+                <div class="testi-quote-media">
+                    <img src="images/minji.jpg" class="person-image" alt="Person Image">
+                    <p class="person-name">Jennifer Lee, Founder of Flora & Co</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" data-aos="fade-up">
+        <div class="container">
+            <h2>Most Favorite</h2>
+            <p>The Most Loved Choices, Perfect for You.</p>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-content" onclick="showProductCard('Sunshine Charm', 'Brighten the day with the warmth of fresh sunflower bouquets, a symbol of happiness and hope in every petal.', 'images/sunflower.jpg')">
+                        <img src="images/sunflower.jpg" alt="Feature 1">
+                        <h3>Sunshine Charm</h3>
+                        <p>Brighten the day with the warmth of fresh sunflower bouquets, a symbol of happiness and hope in every petal.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-content" onclick="showProductCard('Crimson & Snow', 'A bouquet that unites the eternal love of red roses and the peace of white roses to express the deepest emotions.', 'images/rose.jpg')">
+                        <img src="images/rose.jpg" alt="Feature 2">
+                        <h3>Crimson & Snow</h3>
+                        <p>A bouquet that unites the eternal love of red roses and the peace of white roses to express the deepest emotions.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-content" onclick="showProductCard('Daisy Delight', 'A simple yet charming bouquet, with daisies symbolizing happiness and purity.', 'images/daisy.jpg')">
+                        <img src="images/daisy.jpg" alt="Feature 3">
+                        <h3>Daisy Delight</h3>
+                        <p>A simple yet charming bouquet, with daisies symbolizing happiness and purity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Card Modal -->
+    <div id="product-card-modal" class="product-modal" style="display:none;">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProductCard()">&times;</button>
+            <img id="modal-product-image" class="modal-image" src="" alt="">
+            <h2 id="modal-product-name"></h2>
+            <p id="modal-product-desc" class="description"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-left">
+                Flora & Co
+            </div>
+            <div class="footer-center">
+                <h3>Contact Us</h3>
+                <a href="https://www.instagram.com/flora_co/" target="_blank">
+                    <img src="images/ig2.png" alt="Instagram Logo" class="instagram-logo">
+                </a>
+            </div>
+            <div class="footer-right">
+                <h3>Visit Us Here</h3>
+                <p>Email: floranco@email.com</p>
+                <p>Phone: +62 8126 7806</p>
+                <p>Surabaya, Indonesia</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2018 — 2020 — Privacy — Terms</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        if (window.AOS) {
+            AOS.init();
+        }
+        function showProductCard(name, desc, image) {
+            document.getElementById('modal-product-name').textContent = name;
+            document.getElementById('modal-product-desc').textContent = desc;
+            document.getElementById('modal-product-image').src = image;
+            document.getElementById('modal-product-image').alt = name;
+            document.getElementById('product-card-modal').style.display = 'flex';
+        }
+        function closeProductCard() {
+            document.getElementById('product-card-modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
