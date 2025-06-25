@@ -158,7 +158,7 @@
                                 <p>Atau scan QR code berikut:</p>
                                 <img src="images/qrcode.png" alt="GoPay QR Code" style="max-width: 200px;">
                             </div>
-                            <div id="ovo-details">
+                            <div id="ovo-details" class="payment-details" style="display:none;">
                                 <p>Nomor OVO: 0812-3456-7890</p>
                                 <p>Atau scan QR code berikut:</p>
                                 <img src="images/qrcode.png" alt="OVO QR Code" style="max-width: 200px;">
@@ -171,6 +171,18 @@
             </div>
         </div>
     </section>
+
+    <div id="payment-success-modal" class="product-modal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(34,60,80,0.18);align-items:center;justify-content:center;">
+        <div class="product-modal-content" style="background:#fff;border-radius:18px;max-width:370px;width:90vw;padding:32px 24px;box-shadow:0 8px 32px rgba(34,60,80,0.18);text-align:center;position:relative;">
+            <span class="close" onclick="closeSuccessModal()" style="position:absolute;top:18px;right:24px;font-size:1.5em;cursor:pointer;">&times;</span>
+            <div style="margin-bottom:18px;">
+                <img src="images/rose-ele.png" alt="Success" style="width:70px;height:70px;border-radius:50%;background:#E2EAF4;box-shadow:0 2px 8px #e2eaf4;margin-bottom:10px;">
+            </div>
+            <h2 style="color:#6FCF97;margin-bottom:10px;">Pembayaran Berhasil!</h2>
+            <p style="color:#333;margin-bottom:18px;">Terima kasih telah berbelanja di Flora & Co.<br>Pesanan Anda sedang diproses.</p>
+            <button onclick="closeSuccessModal()" class="submit-payment" style="margin-top:8px;">Kembali ke Beranda</button>
+        </div>
+    </div>
 
     <footer>
         <div class="container">
@@ -197,5 +209,15 @@
 
     <script src="script.js"></script>
     <script src="payment.js"></script>
+    <script>
+    document.getElementById('payment-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('payment-success-modal').style.display = 'flex';
+    });
+    function closeSuccessModal() {
+        document.getElementById('payment-success-modal').style.display = 'none';
+        window.location.href = 'index.html';
+    }
+    </script>
 </body>
 </html>
