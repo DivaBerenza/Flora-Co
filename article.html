@@ -47,6 +47,10 @@
                                 <i class="fas fa-tachometer-alt"></i>
                                 <span>Dashboard</span>
                             </a>
+                            <a href="history.html" class="dropdown-item">
+                                <i class="fas fa-history"></i>
+                                <span>History</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -101,7 +105,7 @@
         <div class="container">
             <div class="grid-container">
                 <!-- Article 1 -->
-                <div class="article-card" data-aos="fade-up" data-category="trends" onclick="showArticleDetail('Top Floral Trends for 2023', 'images/floraltrend.jpg', 'Explore the color palettes, arrangements, and styles that will dominate weddings and events this year. In 2023, bold colors, sustainable floristry, and unique textures are in the spotlight. Discover how to incorporate these trends into your own floral designs for unforgettable occasions.', 'June 2, 2023', 'Trends')">
+                <div class="article-card" data-aos="fade-up" data-category="trends">
                     <div class="article-image">
                         <img src="images/floraltrend.jpg" alt="Floral Trends 2023">
                         <div class="category-tag">Trends</div>
@@ -116,7 +120,7 @@
                     </div>
                 </div>
                 <!-- Article 2 -->
-                <div class="article-card" data-aos="fade-up" data-aos-delay="100" data-category="events" onclick="showArticleDetail('Choosing the Perfect Wedding Flowers', 'images/wedding.jpg', 'A comprehensive guide to selecting flowers that match your wedding theme, season, and personality. Make your special day even more memorable with the right floral choices.', 'April 18, 2023', 'Event Ideas')">
+                <div class="article-card" data-aos="fade-up" data-aos-delay="100" data-category="events">
                     <div class="article-image">
                         <img src="images/wedding.jpg" alt="Wedding Flowers">
                         <div class="category-tag">Event Ideas</div>
@@ -131,7 +135,7 @@
                     </div>
                 </div>
                 <!-- Article 3 -->
-                <div class="article-card" data-aos="fade-up" data-aos-delay="200" data-category="care" onclick="showArticleDetail('Seasonal Flower Guide: What\'s Blooming Now', 'images/seasonal.jpg', 'Learn which flowers are in season throughout the year for the freshest and most affordable arrangements. Our seasonal guide helps you choose blooms that are both beautiful and budget-friendly.', 'March 5, 2023', 'Flower Care')">
+                <div class="article-card" data-aos="fade-up" data-aos-delay="200" data-category="care">
                     <div class="article-image">
                         <img src="images/seasonal.jpg" alt="Seasonal Flowers">
                         <div class="category-tag">Flower Care</div>
@@ -146,7 +150,7 @@
                     </div>
                 </div>
                 <!-- Article 4 -->
-                <div class="article-card" data-aos="fade-up" data-category="stories" onclick="showArticleDetail('Behind the Bouquet: A Day with Our Florists', 'images/story.jpg', 'An intimate look at the creative process and dedication that goes into every Flora & Co arrangement. Discover the artistry and passion of our florists in this behind-the-scenes story.', 'February 20, 2023', 'Our Stories')">
+                <div class="article-card" data-aos="fade-up" data-category="stories">
                     <div class="article-image">
                         <img src="images/story.jpg" alt="Flora & Co Story">
                         <div class="category-tag">Our Stories</div>
@@ -161,7 +165,7 @@
                     </div>
                 </div>
                 <!-- Article 5 -->
-                <div class="article-card" data-aos="fade-up" data-aos-delay="100" data-category="events" onclick="showArticleDetail('DIY: Create a Stunning Centerpiece in 5 Steps', 'images/diy.jpg', 'Follow our easy tutorial to make a professional-looking floral centerpiece for your next gathering. Impress your guests with your creativity and floral design skills.', 'January 12, 2023', 'Event Ideas')">
+                <div class="article-card" data-aos="fade-up" data-aos-delay="100" data-category="events">
                     <div class="article-image">
                         <img src="images/diy.jpg" alt="DIY Centerpiece">
                         <div class="category-tag">Event Ideas</div>
@@ -176,7 +180,7 @@
                     </div>
                 </div>
                 <!-- Article 6 -->
-                <div class="article-card" data-aos="fade-up" data-aos-delay="200" data-category="trends" onclick="showArticleDetail('Sustainable Floristry: Eco-Friendly Flower Practices', 'images/eco.jpg', 'How Flora & Co is leading the way in environmentally conscious floral design and sourcing. Learn about our sustainable practices and how they benefit the planet.', 'December 8, 2022', 'Trends')">
+                <div class="article-card" data-aos="fade-up" data-aos-delay="200" data-category="trends">
                     <div class="article-image">
                         <img src="images/eco.jpg" alt="Sustainable Floristry">
                         <div class="category-tag">Trends</div>
@@ -189,17 +193,6 @@
                             <a href="#" class="read-link">Read <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- Article Detail Modal -->
-            <div id="article-detail-modal" class="product-modal" style="display:none;">
-                <div class="modal-content" style="max-width:600px">
-                    <button class="modal-close" onclick="closeArticleDetail()">&times;</button>
-                    <img id="modal-article-image" class="modal-image" src="" alt="">
-                    <span id="modal-article-category" class="article-category"></span>
-                    <h2 id="modal-article-title"></h2>
-                    <p id="modal-article-date" style="color:#888;font-size:0.95em;margin-bottom:10px;"></p>
-                    <p id="modal-article-desc" class="description"></p>
                 </div>
             </div>
             <div class="pagination" data-aos="fade-up">
@@ -251,22 +244,5 @@
     <script>
         AOS.init()
     </script>
-    <script>
-function showArticleDetail(title, image, desc, date, category) {
-    document.getElementById('modal-article-title').textContent = title;
-    document.getElementById('modal-article-image').src = image;
-    document.getElementById('modal-article-image').alt = title;
-    document.getElementById('modal-article-desc').textContent = desc;
-    document.getElementById('modal-article-date').textContent = date;
-    document.getElementById('modal-article-category').textContent = category;
-    document.getElementById('article-detail-modal').style.display = 'flex';
-}
-function closeArticleDetail() {
-    document.getElementById('article-detail-modal').style.display = 'none';
-}
-// Optional: prevent click on .read-link from navigating
-const readLinks = document.querySelectorAll('.read-link');
-readLinks.forEach(link => link.addEventListener('click', function(e){e.preventDefault();}));
-</script>
 </body>
 </html>

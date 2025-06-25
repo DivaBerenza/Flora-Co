@@ -1294,7 +1294,7 @@ button:hover {
 
 /* Profile Page Specific Styles */
 .profile-hero {
-    background: linear-gradient(135deg, #f8f3e6 0%, #e8f5e9 100%);
+    background: linear-gradient(135deg, #E2EAF4 0%, #E2EAF4 100%);
     padding: 3rem 0;
     text-align: center;
 }
@@ -1364,7 +1364,7 @@ button:hover {
     display: block;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #4CAF50;
+    color: black;
 }
 
 .stat-label {
@@ -1395,7 +1395,7 @@ button:hover {
 }
 
 .tab-button.active {
-    color: #4CAF50;
+    color: black;
     font-weight: bold;
 }
 
@@ -1406,7 +1406,7 @@ button:hover {
     left: 0;
     width: 100%;
     height: 3px;
-    background: #4CAF50;
+    background: black;
 }
 
 .tab-content {
@@ -2284,7 +2284,7 @@ button:hover {
 
 .testimonial-text p {
     font-style: italic;
-    color: #EFC3CA;
+    color: black;
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -2295,13 +2295,13 @@ button:hover {
 
 .customer-name {
     font-weight: 600;
-    color: #EFC3CA;
+    color: black;
     display: block;
     margin-bottom: 5px;
 }
 
 .stars {
-    color: #EFC3CA;
+    color: #FCE589;
 }
 
 .about-cta {
@@ -2796,7 +2796,7 @@ button:hover {
     border: 1px solid #d1d5db;
     border-radius: 8px;
     font-size: 1rem;
-    background: #fff;
+    background: #fafbfc;
     color: #2d3a4b;
     transition: border 0.2s, box-shadow 0.2s;
     margin-bottom: 2px;
@@ -2866,5 +2866,107 @@ button:hover {
     }
     .contact-form-wrapper, .contact-info {
         max-width: 100%;
+    }
+}
+
+/* Login Page Styles */
+.login-section {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #E2EAF4 60%, #f6f7fa 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+}
+.login-section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.login-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(34, 60, 80, 0.10);
+    padding: 40px 32px 32px 32px;
+    min-width: 320px;
+    max-width: 370px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.login-card h2 {
+    margin-bottom: 24px;
+    color: #2c3e50;
+    font-size: 2em;
+    font-weight: 700;
+}
+.login-form .form-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+.login-form label {
+    font-weight: 500;
+    margin-bottom: 7px;
+    display: block;
+    color: #333;
+    letter-spacing: 0.01em;
+}
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid #e2eaf4;
+    border-radius: 7px;
+    font-size: 1em;
+    background: #fafbfc;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+    font-family: inherit;
+    color: #222;
+}
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+    border: 1.5px solid #007bff;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(34,60,80,0.07);
+}
+.btn-submit {
+    width: 100%;
+    background: linear-gradient(90deg, #e2eaf4 0%, #b6c9e2 100%);
+    color: #222;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+.btn-submit:hover {
+    background: linear-gradient(90deg, #b6c9e2 0%, #e2eaf4 100%);
+}
+.register-link {
+    margin-top: 18px;
+    font-size: 1em;
+}
+.register-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+.register-link a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+    .login-card {
+        padding: 28px 10px 24px 10px;
+        min-width: 0;
+        max-width: 100%;
+    }
+    .login-section {
+        padding: 30px 0;
     }
 }

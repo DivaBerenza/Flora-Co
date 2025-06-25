@@ -27,12 +27,31 @@
                     </select>
                 </nav>
                 <h2 class="header-title">Flora & Co</h2>
-                
-                <div class="cart-icon-container" onclick="toggleCart()">
-                    &#128722;
-                    <span id="cart-count" class="cart-count">0</span>
+                <div class="header-actions">
+                    <button class="sign-up" onclick="window.location.href='register.html'">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </button>
+                    <div class="profile-container">
+                        <div class="profile-icon" onclick="toggleProfileDropdown()">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div id="profile-dropdown" class="profile-dropdown">
+                            <a href="profile.html" class="dropdown-item">
+                                <i class="fas fa-user"></i>
+                                <span>Profile</span>
+                            </a>
+                            <a href="dashboard.html" class="dropdown-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Dashboard</span>
+                            </a>
+                            <a href="history.html" class="dropdown-item">
+                                <i class="fas fa-history"></i>
+                                <span>History</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <button class="sign-up">Sign Up</button>
+  
             </div>
         </div>
     </header>

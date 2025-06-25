@@ -7,35 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="catalog.html">Catalog</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="article.html">Article</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                    <select class="mobile-nav" onchange="location = this.value;">
-                        <option value="index.html">Home</option>
-                        <option value="about.html">About</option>
-                        <option value="catalog.html">Catalog</option>
-                        <option value="#">Services</option>
-                        <option value="#">Contact</option>
-                    </select>
-                </nav>
-                <h2 class="header-title">Flora & Co</h2>
-                
-                <div class="cart-icon-container" onclick="toggleCart()">
-                    &#128722;
-                    <span id="cart-count" class="cart-count">0</span>
-                </div>
-                <a href="login.html" class="sign-up">Login</a>
-            </div>
-        </div>
-    </header>
 
     <section class="auth-section">
         <div class="auth-container">
@@ -78,34 +49,18 @@
             </div>
             
             <div class="auth-image">
-                <img src="images/register-flower.jpg" alt="Beautiful flowers">
+                <img src="images/register.jpg" alt="Beautiful flowers">
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-left">
-                Flora & Co
-            </div>
-            <div class="footer-center">
-                <h3>Contact Us</h3>
-                <a href="https://www.instagram.com/flora_co/" target="_blank">
-                    <img src="images/ig2.png" alt="Instagram Logo" class="instagram-logo">
-                </a>
-            </div>
-            <div class="footer-right">
-                <h3>Visit Us Here</h3>
-                <p>Email: floranco@email.com</p>
-                <p>Phone: +62 8126 7806</p>
-                <p>Surabaya, Indonesia</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2018 — 2020 — Privacy — Terms</p>
-        </div>
-    </footer>
-
     <script src="script.js"></script>
+    <script>
+    document.getElementById('register-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Simulasi sukses register, redirect ke index.html
+        window.location.href = 'index.html';
+    });
+    </script>
 </body>
 </html>

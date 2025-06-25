@@ -23,7 +23,28 @@
                 </nav>
                 <h2 class="header-title">Dashboard Admin</h2>
                 <div class="header-actions">
-                    <a href="profile.html" class="profile-btn"><i class="fas fa-user"></i> Profile</a>
+                    <button class="sign-up" onclick="window.location.href='register.html'">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </button>
+                    <div class="profile-container">
+                        <div class="profile-icon" onclick="toggleProfileDropdown()">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div id="profile-dropdown" class="profile-dropdown">
+                            <a href="profile.html" class="dropdown-item">
+                                <i class="fas f a-user"></i>
+                                <span>Profile</span>
+                            </a>
+                            <a href="dashboard.html" class="dropdown-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Dashboard</span>
+                            </a>
+                            <a href="history.html" class="dropdown-item">
+                                <i class="fas fa-history"></i>
+                                <span>History</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -100,30 +121,6 @@
                     <!-- Tambah transaksi lainnya di sini -->
                 </tbody>
             </table>
-        </div>
-
-        <div class="dashboard-section">
-            <h3><i class="fas fa-newspaper"></i> Kelola Artikel</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Judul Artikel</th>
-                        <th>Penulis</th>
-                        <th>Tanggal</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Tips Merawat Bunga Segar di Rumah</td>
-                        <td>Admin</td>
-                        <td>2025-06-25</td>
-                        <td><button>Edit</button> <button>Hapus</button></td>
-                    </tr>
-                    <!-- Tambah artikel lainnya di sini -->
-                </tbody>
-            </table>
-            <button class="add-btn">+ Tambah Artikel</button>
         </div>
     </main>
 

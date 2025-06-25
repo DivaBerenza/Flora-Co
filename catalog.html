@@ -17,8 +17,8 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="catalog.html">Catalog</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="#">Article</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="article.html">Article</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                     <select class="mobile-nav" onchange="location = this.value;">
                         <option value="index.html">Home</option>
@@ -51,6 +51,10 @@
                                 <i class="fas fa-tachometer-alt"></i>
                                 <span>Dashboard</span>
                             </a>
+                            <a href="history.html" class="dropdown-item">
+                                <i class="fas fa-history"></i>
+                                <span>History</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -73,15 +77,15 @@
 
     <section class="catalog-hero">
         <div class="container">
-            <h1>Explore Our Flower Collection</h1>
-            <p>Discover beautiful and fresh flower arrangements for every occasion.</p>
+            <h1>Jelajahi Koleksi Bunga Kami</h1>
+            <p>Temukan rangkaian bunga segar dan indah untuk setiap kesempatan.</p>
         </div>
     </section>
 
     <section class="product-grid">
         <div class="container">
             <div class="grid">
-                <div class="product-card" onclick="showProductDetail('Sunshine Bouquet', '150000', 'images/sunflower.jpg', 'A bright sunflower bouquet that brings warmth and happiness. Perfect for birthdays or simply to brighten someone’s day.')">
+                <div class="product-card" onclick="showProductDetail('Sunshine Bouquet', '150000', 'images/sunflower.jpg', 'Bouquet bunga matahari cerah yang membawa kehangatan dan kebahagiaan. Cocok untuk hadiah ulang tahun atau sekadar menyemangati hari seseorang.')">
                     <img src="images/sunflower.jpg" alt="Sunflower Bouquet">
                     <h3>Sunshine Bouquet</h3>
                     <p class="price">Rp 150.000</p>
@@ -92,7 +96,7 @@
                         Add to Cart
                     </button>
                 </div>
-                <div class="product-card" onclick="showProductDetail('Crimson Romance', '200000', 'images/rose.jpg', 'A classic red rose arrangement symbolizing love and passion. Perfect for anniversaries, Valentine’s, or declarations of love.')">
+                <div class="product-card" onclick="showProductDetail('Crimson Romance', '200000', 'images/rose.jpg', 'Rangkaian mawar merah klasik yang melambangkan cinta dan gairah. Sempurna untuk anniversary, Valentine, atau ungkapan cinta.')">
                     <img src="images/rose.jpg" alt="Red Rose Bouquet">
                     <h3>Crimson Romance</h3>
                     <p class="price">Rp 200.000</p>
@@ -103,7 +107,7 @@
                         Add to Cart
                     </button>
                 </div>
-                <div class="product-card" onclick="showProductDetail('Sweet Daisies', '120000', 'images/daisy.jpg', 'A sweet and simple fresh daisy bouquet. Perfect for friends or family who love simplicity.')">
+                <div class="product-card" onclick="showProductDetail('Sweet Daisies', '120000', 'images/daisy.jpg', 'Bouquet bunga daisy segar yang manis dan sederhana. Cocok untuk teman atau keluarga yang menyukai kesederhanaan.')">
                     <img src="images/daisy.jpg" alt="Daisy Bouquet">
                     <h3>Sweet Daisies</h3>
                     <p class="price">Rp 120.000</p>
@@ -114,7 +118,7 @@
                         Add to Cart
                     </button>
                 </div>
-                <div class="product-card" onclick="showProductDetail('Vibrant Tulips', '180000', 'images/tulip.jpg', 'A colorful tulip arrangement that is bright and refreshing. Brings the feeling of spring anywhere.')">
+                <div class="product-card" onclick="showProductDetail('Vibrant Tulips', '180000', 'images/tulip.jpg', 'Rangkaian tulip warna-warni yang cerah dan menyegarkan. Membawa suasana musim semi ke mana pun.')">
                     <img src="images/tulip.jpg" alt="Tulip Bouquet">
                     <h3>Vibrant Tulips</h3>
                     <p class="price">Rp 180.000</p>
@@ -125,7 +129,7 @@
                         Add to Cart
                     </button>
                 </div>
-                <div class="product-card" onclick="showProductDetail('Elegant Lilies', '220000', 'images/lily.jpg', 'Elegant lilies with a fragrant aroma. Perfect for formal events or as a table decoration.')">
+                <div class="product-card" onclick="showProductDetail('Elegant Lilies', '220000', 'images/lily.jpg', 'Bunga lili yang elegan dengan aroma yang harum. Sempurna untuk acara formal atau sebagai dekorasi meja.')">
                     <img src="images/lily.jpg" alt="Lily Bouquet">
                     <h3>Elegant Lilies</h3>
                     <p class="price">Rp 220.000</p>
@@ -136,7 +140,7 @@
                         Add to Cart
                     </button>
                 </div>
-                <div class="product-card" onclick="showProductDetail('Harmony Mix', '250000', 'images/mix.jpg', 'A perfect combination of various fresh flowers creating harmony in color and shape. For those who love variety.')">
+                <div class="product-card" onclick="showProductDetail('Harmony Mix', '250000', 'images/mix.jpg', 'Kombinasi sempurna berbagai bunga segar yang menciptakan harmoni warna dan bentuk. Untuk mereka yang menyukai variasi.')">
                     <img src="images/mix.jpg" alt="Mixed Flowers Bouquet">
                     <h3>Harmony Mix</h3>
                     <p class="price">Rp 250.000</p>
@@ -147,7 +151,7 @@
                         Add to Cart
                     </button>
                 </div>
-                <div class="product-card" onclick="showProductDetail('The Lilac', '150000', 'images/lilac.jpg', 'Soft beauty, radiating romantic charm and a sweet, calming fragrance. Perfect for bringing a sense of peace and elegance.')">
+                <div class="product-card" onclick="showProductDetail('The Lilac', '150000', 'images/lilac.jpg', 'Keindahan yang lembut, memancarkan pesona romantis dan aroma manis yang menenangkan. Sempurna untuk menghadirkan nuansa kedamaian dan keanggunan.')">
                     <img src="images/lilac.jpg" alt="Mixed Flowers Bouquet">
                     <h3>The Lilac</h3>
                     <p class="price">Rp 150.000</p>
