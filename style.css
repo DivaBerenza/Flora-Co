@@ -2284,7 +2284,7 @@ button:hover {
 
 .testimonial-text p {
     font-style: italic;
-    color: #555;
+    color: #EFC3CA;
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -2295,13 +2295,13 @@ button:hover {
 
 .customer-name {
     font-weight: 600;
-    color: #2c3e50;
+    color: #EFC3CA;
     display: block;
     margin-bottom: 5px;
 }
 
 .stars {
-    color: #f1c40f;
+    color: #EFC3CA;
 }
 
 .about-cta {
